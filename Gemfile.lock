@@ -46,6 +46,8 @@ GEM
       erubi (~> 1.4)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.1, >= 1.2.0)
+    active_storage_base64 (2.0.0)
+      rails (>= 7.0)
     activejob (7.0.4)
       activesupport (= 7.0.4)
       globalid (>= 0.3.6)
@@ -61,6 +63,8 @@ GEM
       activesupport (= 7.0.4)
       marcel (~> 1.0)
       mini_mime (>= 1.1.0)
+    activestorage-validator (0.2.2)
+      rails (>= 6.0.4.1)
     activesupport (7.0.4)
       concurrent-ruby (~> 1.0, >= 1.0.2)
       i18n (>= 1.6, < 2)
@@ -172,6 +176,8 @@ PLATFORMS
   arm64-darwin-22
 
 DEPENDENCIES
+  active_storage_base64
+  activestorage-validator
   bootsnap
   debug
   puma (~> 5.0)
