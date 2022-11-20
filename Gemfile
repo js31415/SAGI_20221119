@@ -16,6 +16,8 @@ gem 'activestorage-validator'
 gem 'active_storage_base64'
 gem 'active_model_serializers'
 
+gem 'image_processing', '~> 1.2'
+
 gem 'byebug'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]

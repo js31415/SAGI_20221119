@@ -24,6 +24,8 @@ module SAGI20221119
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
 
+    config.active_storage.variant_processor = :mini_magick
+
     config.generators do |g|
       g.test_framework :rspec
       g.view_specs false
