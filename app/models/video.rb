@@ -1,7 +1,7 @@
 class Video < ApplicationRecord
-  has_one_attached :file do  |attachable|
-    attachable.variant :thumbnail, resize_to_limit: [256, 256]
-  end
+  include ActiveStorageSupport::SupportForBase64
+  
+  has_one_base64_attached :file
 
   belongs_to :category
 

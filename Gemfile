@@ -14,6 +14,9 @@ gem "puma", "~> 5.0"
 
 gem 'activestorage-validator'
 gem 'active_storage_base64'
+gem 'active_model_serializers'
+
+gem 'byebug'
 
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 # gem "jbuilder"
