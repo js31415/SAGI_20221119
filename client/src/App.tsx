@@ -1,13 +1,19 @@
 import * as React from 'react';
-import { ChakraProvider, Box, Grid, theme } from '@chakra-ui/react';
-import { ColorModeSwitcher } from './ColorModeSwitcher';
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import { ChakraProvider, theme } from '@chakra-ui/react';
+import { BrowserRouter, Route } from 'react-router-dom';
+
+const queryClient = new QueryClient();
 
 export const App = () => (
-  <ChakraProvider theme={theme}>
-    <Box textAlign="center" fontSize="xl">
-      <Grid minH="100vh" p={3}>
-        <ColorModeSwitcher justifySelf="flex-end" />
-      </Grid>
-    </Box>
-  </ChakraProvider>
+  <QueryClientProvider client={queryClient}>
+    <BrowserRouter>
+      <ChakraProvider theme={theme}>
+        <Route path="/">
+          <Route index element={<>home</>} />
+        </Route>
+        <Route path="/upload" element={<>upload</>} />
+      </ChakraProvider>
+    </BrowserRouter>
+  </QueryClientProvider>
 );
