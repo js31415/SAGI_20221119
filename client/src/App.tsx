@@ -1,19 +1,21 @@
 import * as React from 'react';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { ChakraProvider, theme } from '@chakra-ui/react';
-import { BrowserRouter, Route } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
+import HomePage from 'pages/home.page';
+import UploadPage from 'pages/upload.page';
 
 const queryClient = new QueryClient();
 
 export const App = () => (
   <QueryClientProvider client={queryClient}>
-    <BrowserRouter>
-      <ChakraProvider theme={theme}>
+    <ChakraProvider theme={theme}>
+      <Routes>
         <Route path="/">
-          <Route index element={<>home</>} />
+          <Route index element={<HomePage />} />
         </Route>
-        <Route path="/upload" element={<>upload</>} />
-      </ChakraProvider>
-    </BrowserRouter>
+        <Route path="/upload" element={<UploadPage />} />
+      </Routes>
+    </ChakraProvider>
   </QueryClientProvider>
 );
