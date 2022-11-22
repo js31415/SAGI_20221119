@@ -68,4 +68,4 @@ Rails.application.configure do
   config.active_storage.service = :local
 end
 
-Rails.application.routes.default_url_options[:host] = 'localhost:3000'
+Rails.application.routes.default_url_options[:host] = 'localhost:3001'
